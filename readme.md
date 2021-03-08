@@ -28,7 +28,8 @@ Then fill the wizard with the following parameters:
 
 Click the `Create` button. 
 
-We are using the **Ephemeral** implementation because this a short-lived demo and we do not need to retain the data.  
+We are using the **Ephemeral** implementation because this a short-lived demo and we do not need to retain the data. 
+Note that database name must be "sampledb" not "petclinic" in the above table.
 
 In a production system, you will most likely be using a permanent MySQL instance. This stores the data in a Persistent Volume (basically a virtual hard drive), meaning the MySQL pod can be destroyed and replaced with the data remaining intact.
 
@@ -49,7 +50,7 @@ Add the following environment variables:
 
 ```
 SPRING_PROFILES_ACTIVE=mysql
-MYSQL_URL=jdbc:mysql://mysql:3306/petclinic
+MYSQL_URL=jdbc:mysql://mysql:3306/sampledb
 ```
 
 ![DC Env Vars](images/9-app-env-vars.png)
